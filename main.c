@@ -17,7 +17,7 @@ int main(__attribute__((unused))int argc, char *argv[])
 	while (fgets(buff, 1024, file))
 	{
 		n = convert_number(buff);
-		printf("%lld\n", n);
+		factoring_number(n);
 	}
 	fclose(file);
 	return (0);
