@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+  * convert_number - convert it
+  * @buff: buff
+  * Return: long long int
+  */
 long long int convert_number(char *buff)
 {
 	int len = strlen(buff);
