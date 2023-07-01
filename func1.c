@@ -21,31 +21,12 @@ long long int convert_number(char *buff)
 }
 
 /**
-  * prime_n - prime numbers
-  * @n: int l l
-  * Return: return n
-  */
-long long int prime_n(long long int n)
-{
-	long long int list[] = {2, 3, 5, 7, 11};
-	long long int i = 0;
-
-	for (i = 0; i < 5; i++)
-	{
-		if (n % list[i] == 0)
-		{
-			return (list[i]);
-		}
-	}
-	return (-1);
-}
-/**
   * factoring_number - factoring number
   * @n: number
   */
 void factoring_number(long long int n)
 {
-	long long int i = 0, p, a, b;
+	long long int p, a, b;
 
 	p = prime_n(n);
 	if (p != -1)
@@ -54,15 +35,8 @@ void factoring_number(long long int n)
 		b = n / p;
 	} else
 	{
-		for (i = 0; (prime_n(i) == -1) && (i < n / 11); i++)
-		{
-			if (n % i == 0)
-			{
-				a = i;
-				b = n / i;
-				break;
-			}
-		}
+		a = 1;
+		b = n;
 	}
 	printf("%lld=%lld*%lld\n", n, b, a);
 }

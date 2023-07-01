@@ -8,5 +8,6 @@
 
 long long int convert_number(char *buff);
 void factoring_number(long long int n);
+long long int prime_n(long long int n);
 
 #endif
