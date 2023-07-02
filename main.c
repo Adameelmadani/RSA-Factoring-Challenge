@@ -16,7 +16,8 @@ int main(__attribute__((unused))int argc, char *argv[])
 	file = fopen(argv[1], "r");
 	while (fgets(buff, 1024, file))
 	{
-		n = convert_number(buff);
+		if (strlen(buff) <= 20)
+			n = convert_number(buff);
 		factoring_number(n);
 	}
 	fclose(file);
